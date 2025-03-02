@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SynthLauncher</class>
+ <widget class="QMainWindow" name="SynthLauncher">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1054</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SynthLauncher</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #202020;
+    color: white;
+}
+QPushButton {
+    background-color: #444;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+QPushButton:hover {
+    background-color: #666;
+}
+QScrollArea {
+    border: 2px solid #00aa00;
+    border-radius: 5px;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="launchButton">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>490</y>
+      <width>150</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+       QPushButton {
+           background-color: rgb(0, 204, 102); /* Green color */
+           color: white;
+           font-size: 16px;
+           font-weight: bold;
+           border-radius: 4px; /* Less rounded corners */
+           padding: 10px;
+       }
+       QPushButton:hover {
+           background-color: rgb(0, 230, 115); /* Lighter green for hover effect */
+       }
+       QPushButton:pressed {
+           background-color: rgb(0, 180, 90); /* Darker green for pressed effect */
+       }
+      </string>
+    </property>
+    <property name="text">
+     <string>Launch</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBoxWhatVersions">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>160</y>
+      <width>87</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>All</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Stable</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Beta</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Alpha</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Trolls</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>150</y>
+      <width>311</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="all">
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
+     </property>
+     <widget class="QListWidget" name="listWidget">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>256</width>
+        <height>192</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>1.21</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>beta1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>alpha2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>infinity</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="stable">
+     <widget class="QListWidget" name="listWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>256</width>
+        <height>192</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>1.21</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>1.12</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="beta">
+     <widget class="QListWidget" name="listWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>256</width>
+        <height>192</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>beta1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>beta2</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="alpha">
+     <widget class="QListWidget" name="listWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>0</y>
+        <width>256</width>
+        <height>192</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>alpha1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>alpha2</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="trolls">
+     <widget class="QListWidget" name="listWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>256</width>
+        <height>192</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>infintiy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Dankware version</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>comboBoxWhatVersions</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>stackedWidget</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>703</x>
+     <y>175</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>540</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
